@@ -42,16 +42,16 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: carts-deployment
+  namespace: sock-shop-v8
   labels:
     name: carts
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: carts
-    namespace: sock-shop-v8
+      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -100,16 +100,16 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: carts-service
+  namespace: sock-shop-v8
   labels:
     name: carts
-  namespace: sock-shop-v8
 spec:
   workload:
     apiVersion: v1
     kind: Service
     metadata:
       name: carts
-    namespace: sock-shop-v8
+      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -122,18 +122,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: carts-db-deployment
+  namespace: sock-shop-v8
   labels:
     name: carts-db
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: carts-db
+      namespace: sock-shop-v8
       labels:
         name: carts-db
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -173,16 +173,16 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: carts-db-service
+  namespace: sock-shop-v8
   labels:
     name: carts-db
-  namespace: sock-shop-v8
 spec:
   workload:
     apiVersion: v1
     kind: Service
     metadata:
       name: carts-db
-    namespace: sock-shop-v8
+      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -195,18 +195,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: catalogue-deployment
+  namespace: sock-shop-v8
   labels:
     name: catalogue
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: catalogue
+      namespace: sock-shop-v8
       labels:
         name: catalogue
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -260,18 +260,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: catalogue-service
+  namespace: sock-shop-v8
   labels:
     name: catalogue
-  namespace: sock-shop-v8
 spec:
   workload:
     apiVersion: v1
     kind: Service
     metadata:
       name: catalogue
+      namespace: sock-shop-v8
       labels:
         name: catalogue
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -284,18 +284,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: catalogue-db-deployment
+  namespace: sock-shop-v8
   labels:
     name: catalogue-db
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: catalogue-db
+      namespace: sock-shop-v8
       labels:
         name: catalogue-db
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -324,18 +324,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: catalogue-db-service
+  namespace: sock-shop-v8
   labels:
     name: catalogue
-  namespace: sock-shop-v8
 spec:
   workload:
     apiVersion: v1
     kind: Service
     metadata:
       name: catalogue-db
+      namespace: sock-shop-v8
       labels:
         name: catalogue-db
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -348,16 +348,16 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: front-end-deployment
+  namespace: sock-shop-v8
   labels:
     name: front-end
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: front-end
-    namespace: sock-shop-v8
+      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -409,18 +409,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: front-end-service
+  namespace: sock-shop-v8
   labels:
     name: front-end
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: front-end
+      namespace: sock-shop-v8
       labels:
         name: front-end
-      namespace: sock-shop-v8
     spec:
       type: LoadBalancer
       ports:
@@ -433,18 +433,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: orders-deployment
+  namespace: sock-shop-v8
   labels:
     name: orders
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: orders
+      namespace: sock-shop-v8
       labels:
         name: orders
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -493,18 +493,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: orders-service
+  namespace: sock-shop-v8
   labels:
     name: orders
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: orders
+      namespace: sock-shop-v8
       labels:
         name: orders
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -517,18 +517,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: orders-db-deployment
+  namespace: sock-shop-v8
   labels:
     name: orders-db
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: orders-db
+      namespace: sock-shop-v8
       labels:
         name: orders-db
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -568,18 +568,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: orders-db-service
+  namespace: sock-shop-v8
   labels:
     name: orders-db
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: orders-db
+      namespace: sock-shop-v8
       labels:
         name: orders-db
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -592,18 +592,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: payment-deployment
+  namespace: sock-shop-v8
   labels:
     name: payment
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: payment
+      namespace: sock-shop-v8
       labels:
         name: payment
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -654,18 +654,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: payment-service
+  namespace: sock-shop-v8
   labels:
     name: payment
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: payment
+      namespace: sock-shop-v8
       labels:
         name: payment
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -678,18 +678,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: queue-master-deployment
+  namespace: sock-shop-v8
   labels:
     name: queue-master
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: queue-master
+      namespace: sock-shop-v8
       labels:
         name: queue-master
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -722,18 +722,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: queue-master-service
+  namespace: sock-shop-v8
   labels:
     name: queue-master
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: queue-master
+      namespace: sock-shop-v8
       labels:
         name: queue-master
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -746,18 +746,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: rabbitmq-deployment
+  namespace: sock-shop-v8
   labels:
     name: rabbitmq
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: rabbitmq
+      namespace: sock-shop-v8
       labels:
         name: rabbitmq
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -798,18 +798,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: rabbitmq-service
+  namespace: sock-shop-v8
   labels:
     name: rabbitmq
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: rabbitmq
+      namespace: sock-shop-v8
       labels:
         name: rabbitmq
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -827,18 +827,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: session-db-deployment
+  namespace: sock-shop-v8
   labels:
     name: session-db
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: session-db
+      namespace: sock-shop-v8
       labels:
         name: session-db
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -871,18 +871,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: session-db-service
+  namespace: sock-shop-v8
   labels:
     name: session-db
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: session-db
+      namespace: sock-shop-v8
       labels:
         name: session-db
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -895,18 +895,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: shipping-deployment
+  namespace: sock-shop-v8
   labels:
     name: shipping-db
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: shipping
+      namespace: sock-shop-v8
       labels:
         name: shipping
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -957,18 +957,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: shipping-service
+  namespace: sock-shop-v8
   labels:
     name: shipping
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: shipping
+      namespace: sock-shop-v8
       labels:
         name: shipping
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -981,18 +981,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: user-deployment
+  namespace: sock-shop-v8
   labels:
     name: user
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: user
+      namespace: sock-shop-v8
       labels:
         name: user
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -1046,18 +1046,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: user-service
+  namespace: sock-shop-v8
   labels:
     name: user
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: user
+      namespace: sock-shop-v8
       labels:
         name: user
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
@@ -1070,18 +1070,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: user-db-deployment
+  namespace: sock-shop-v8
   labels:
     name: user-db
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: user-db
+      namespace: sock-shop-v8
       labels:
         name: user-db
-      namespace: sock-shop-v8
     spec:
       replicas: 1
       selector:
@@ -1122,18 +1122,18 @@ apiVersion: core.oam.dev/v1alpha2
 kind: Component
 metadata:
   name: user-db-service
+  namespace: sock-shop-v8
   labels:
     name: user-db
-  namespace: sock-shop-v8
 spec:
   workload: 
     apiVersion: v1
     kind: Service
     metadata:
       name: user-db
+      namespace: sock-shop-v8
       labels:
         name: user-db
-      namespace: sock-shop-v8
     spec:
       ports:
         # the port that this service should serve on
