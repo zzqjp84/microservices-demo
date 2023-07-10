@@ -359,7 +359,7 @@ spec:
       name: front-end
       namespace: sock-shop-v8
     spec:
-      replicas: 5
+      replicas: 1
       selector:
         matchLabels:
           name: front-end
